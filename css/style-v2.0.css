@@ -207,15 +207,44 @@ div.columna2{
     vertical-align: top;
  }
 
+/* FILA 30%-70%  de experiencia y profesion */
+.fila30-70{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /*    border: blue solid 1px;    BORRAR*/ 
+    width:100%;
+    flex-grow: 50;
+    margin:20px 0;
+}
+
+
  /*2 columnas 30-70*/
  div.col30{
-    width: 28%;
-    display:inline-block;
+    max-width: 200px;
+    width: 100%;
+    display:flex;
     padding: 1%;
     vertical-align: top;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    
+    /*    border: pink solid 1px;     BORRAR */
  }
+
+ div.col30 p{
+     display:block;
+ /*   border: green solid 1px;     BORRAR */
+     width: 100%; 
+    }
+
+
  div.col70{
-    width: 67%;
+    max-width: 800px;
+    min-width: 300px;
+    width: 50%;
     display:inline-block;
     padding: 1%;
     vertical-align: top;
