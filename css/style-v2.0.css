@@ -49,7 +49,7 @@ h3{
     margin-bottom: 30px;
 }
 
-.blanco{
+.blanco, div.col30 h4{
     color:#ffffff;
 }
 
@@ -222,29 +222,33 @@ div.columna2{
 
  /*2 columnas 30-70*/
  div.col30{
-    max-width: 200px;
-    width: 100%;
+    background-color: rgb(91,176,167, 0.4);
+    width: 20%;
+    min-width:140px;
     display:flex;
     padding: 1%;
     vertical-align: top;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-content: flex-start;
+    flex-grow:2;
+    margin-right: 10px;
     
     /*    border: pink solid 1px;     BORRAR */
  }
 
  div.col30 p{
      display:block;
+     
  /*   border: green solid 1px;     BORRAR */
      width: 100%; 
     }
 
 
  div.col70{
-    max-width: 800px;
-    min-width: 300px;
-    width: 50%;
+    /*max-width: 800px;
+    min-width: 300px;*/
+    width: 70%;
     display:inline-block;
     padding: 1%;
     vertical-align: top;
