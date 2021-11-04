@@ -106,7 +106,7 @@ nav.barra {
 
 /*Posiciona las lista del menú de navegación*/
 
-ul.vacio {
+.vacio {
     padding: 0;
     margin:0;
     list-style: none;
@@ -199,19 +199,20 @@ div.columna3{
 /*  vertical-align: top; */
 }
 
-/*2 columnas 50-50   BORRADOR
-div.columna2{
-    width: 45%;
-    display:inline-block;
-    padding: 2%;
-    vertical-align: top;
- }
- */
+
 
  /*2 columnas 50-50 */
- div.columna2{
-     display:flex;
-     border: 1px solid pink; /*borrar*/
+ ul.columna2{
+     display:flex; /*Primero creamos el contenedor flex*/
+     /*Definimos la direccion e indicamos si permitimos
+     que los elemetos cambien de línea*/
+     flex-flow: row wrap; 
+     /*¿Cómo se distribuyen los elementos en el espacio disponible?*/
+     justify-content: space-evenly;
+     padding:0;
+     margin:0;
+     list-style:none;
+     /*border: 1px solid pink; /*borrar*/
      
  }
 
@@ -358,19 +359,34 @@ a.boton-ini:hover {
 
 
 /*******************Estilos de Habilidades*******************/
-/*estilo fluido*/
+
 .columna2 li{
     min-width: 200px;
     width: 25%;
     display:inline-block;
     margin: 12px;
-
-    border:1px solid blue; /*BORRAR*/
+    order:5;
+    
+    /*border:1px solid blue; /*BORRAR*/
 }
 
-#Java{  /*or qué no funciona?*/
-    order:-1;
+
+
+
+
+#Java{  /*Al ser la habilidad más relevante la coloco primero*/
+    order:1;
 }
+
+#CSS{  /*Al ser la habilidad más relevante la coloco primero*/
+    order:2;
+}
+
+#Photoshop{  /*Al ser una de las habilidades más relevante la coloco primero*/
+    order:3;
+}
+
+
 
 .porcentaje-total{
     position: relative;
