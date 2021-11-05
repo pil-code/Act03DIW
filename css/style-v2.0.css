@@ -77,7 +77,7 @@ big{
 }
 
 
-img {
+#mi-foto {
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 5px;
@@ -201,20 +201,7 @@ div.columna3{
 
 
 
- /*2 columnas 50-50 */
- ul.columna2{
-     display:flex; /*Primero creamos el contenedor flex*/
-     /*Definimos la direccion e indicamos si permitimos
-     que los elemetos cambien de línea*/
-     flex-flow: row wrap; 
-     /*¿Cómo se distribuyen los elementos en el espacio disponible?*/
-     justify-content: space-evenly;
-     padding:0;
-     margin:0;
-     list-style:none;
-     /*border: 1px solid pink; /*borrar*/
-     
- }
+
 
 /* FILA 30%-70%  de experiencia y profesion */
 .fila30-70{
@@ -359,6 +346,21 @@ a.boton-ini:hover {
 
 
 /*******************Estilos de Habilidades*******************/
+ /*Contenedor Habilidades */
+ ul.columna2{
+    display:flex; /*Primero creamos el contenedor flex*/
+    /*Definimos la direccion e indicamos si permitimos
+    que los elemetos cambien de línea*/
+    flex-flow: row wrap; 
+    /*¿Cómo se distribuyen los elementos en el espacio disponible?*/
+    justify-content: space-evenly;
+    padding:0;
+    margin:0;
+    list-style:none;
+    /*border: 1px solid pink; /*borrar*/
+    
+}
+/*Elementos de Habilidades*/
 
 .columna2 li{
     min-width: 200px;
@@ -369,9 +371,6 @@ a.boton-ini:hover {
     
     /*border:1px solid blue; /*BORRAR*/
 }
-
-
-
 
 
 #Java{  /*Al ser la habilidad más relevante la coloco primero*/
@@ -414,22 +413,26 @@ span {
 #contenedor-proyectos{
     margin-left: auto;
     display: flex;
-    border: 1px solid orange;
-    align-items: normal;
-    vertical-align:top;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    /*border: 1px solid orange; BORRAR */
 }
 
 
 .project{
-    width: 100%;
+    width: 300px; /*Para que entren 3 proyectos en cada fila*/
+    min-width: 100px; /*Cuando se alcance este ancho, tendrá que saltar a otra fila*/
     background: #ffffff;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
+    flex-grow: 2;
     margin:1%; 
-    border: 1px solid yellow;
+    /*border: 1px solid yellow; BORRAR*/
 }
+
 
 /*Fuente pequeña utilizando una clase*/
 .small{
@@ -446,10 +449,12 @@ span {
     text-align:right;
 }
 
-
 .project img{
-    margin-bottom: 15px;
+    width: 100%;
+    display:block;
 }
+
+
 
 /*******************Estilos de Footer*******************/
 footer{
