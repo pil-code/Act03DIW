@@ -39,8 +39,6 @@ h2{
 }
 
 
-
-
 h3{
     font-family: Montserrat;
     color:#5BB0A7;
@@ -103,18 +101,12 @@ nav.barra {
 }
 
 
-
-/*Posiciona las lista del menú de navegación*/
-
+/*elimina el formato en las listas no ordenadas*/
 .vacio {
     padding: 0;
     margin:0;
     list-style: none;
     width: 100%;
-}
-
-.bg-blanco{
-   /* z-index: 40; NO ES NECESARIO PORQUE LA BARRA DE NAVEGACION YA TIENE Z-INDEZ*/
 }
 
 
@@ -131,8 +123,6 @@ nav.barra a, a.boton-ini {
     width: 100px;
     background-color: #F2EDEA;
 }
-
-
 
 
 /*Cambia el formato de los botones de la barra de navegación
@@ -152,7 +142,7 @@ nav.barra a:hover {
 
 
 
-/*****Fondos*****/
+/*******************Fondos*******************/
 
 .bg-blanco{
     background-color: #ffffff;
@@ -167,7 +157,6 @@ nav.barra a:hover {
 }
 
 
-
 .contenedor{
     width: 60%;
     min-width: 360px;
@@ -180,26 +169,14 @@ nav.barra a:hover {
     padding-bottom: 3%;
 }
 
-#presentacion{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    align-items: center;
-/*    background-color: aqua; BORRAR*/
-}
 
 
-/*3 columnas 30-30-30*/
+
+/*3 columnas 30-30-30 de presentación*/
 div.columna3{
    width: 250px;
-/*  display:inline-block;*/
    padding: 2%;
-/*  vertical-align: top; */
 }
-
-
 
 
 
@@ -235,15 +212,12 @@ div.columna3{
 
  div.col30 p{
      display:block;
-     
- /*   border: green solid 1px;     BORRAR */
      width: 100%; 
+    /*   border: green solid 1px;     BORRAR */
     }
 
 
  div.col70{
-    /*max-width: 800px;
-    min-width: 300px;*/
     width: 70%;
     display:inline-block;
     padding: 1%;
@@ -261,25 +235,23 @@ div.columna{
 
 /*******************Estilos de Header*******************/
 #header-contenedor{
+    display:flex;
+    justify-content: space-around; /*conseguimos centrar el txt*/
     position: relative;
     background: rgba(91, 164, 176,0.75); /*no hace transparente el header-caja*/
-    /*background-color: #5BB0A7;
-    opacity: 0.75;*/
     min-height: 100vh; /*ocupa toda la pantalla */
     
 }
 
 #header-bg{
     background-repeat: no-repeat;
-
-    
 }
 
 .header-caja{
+    align-self: center;
     position: absolute;
-    top:35%;
-    left: 35%;
-
+    /*top:35%;
+    left: 35%;*/
 }
 
 /*Boton "Hola"*/
@@ -292,7 +264,6 @@ a.boton-ini{
    
 }
 
-
 a.boton-ini:hover {
     cursor: pointer;
     background-color: #AA8A7B;
@@ -302,22 +273,36 @@ a.boton-ini:hover {
 
 
 /*******************Estilos de Perfil*******************/
+/*Flex en el contenedor de presentación*/
+#presentacion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+/*    background-color: aqua; BORRAR*/
+}
 
+/*¿Como se encogen y se expanden
+los contenedores que son hijos directos de #contenedor*/
 #presentacion div{
     flex-shrink: 2;
     flex-grow: 50;
 }
 
-
+/* La foto se debe encoger */
 #mi-foto{
     min-width: 200px;
     flex-shrink: 2;
 }
 
+/*Debe ampliarse*/
 #aboutme{
     flex-grow: 50;
 }
 
+/*Flex en contenedor de los detalles*/
 #perfil #detalles{
     display: flex;
     flex-wrap:wrap;
@@ -325,6 +310,8 @@ a.boton-ini:hover {
 
 }
 
+/*Atributos de los div que están dentro del contenedor de detalles:
+Nombre, edad, etc*/
 #perfil #detalles div{
     flex-wrap: nowrap;
     display:inline-flex;
@@ -338,7 +325,7 @@ a.boton-ini:hover {
     min-width: 100px;
     }
 
-
+/*Este contenedor vaa a expandirse*/
 #perfil #detalles #intereses{
     flex-grow: 2;
 
@@ -347,10 +334,10 @@ a.boton-ini:hover {
 
 /*******************Estilos de Habilidades*******************/
  /*Contenedor Habilidades */
- ul.columna2{
+ ul.columna-habilidades{
     display:flex; /*Primero creamos el contenedor flex*/
     /*Definimos la direccion e indicamos si permitimos
-    que los elemetos cambien de línea*/
+    que los elementos cambien de línea*/
     flex-flow: row wrap; 
     /*¿Cómo se distribuyen los elementos en el espacio disponible?*/
     justify-content: space-evenly;
@@ -358,35 +345,34 @@ a.boton-ini:hover {
     margin:0;
     list-style:none;
     /*border: 1px solid pink; /*borrar*/
-    
 }
+
+
 /*Elementos de Habilidades*/
 
-.columna2 li{
+.columna-habilidades li{
     min-width: 200px;
     width: 25%;
     display:inline-block;
     margin: 12px;
-    order:5;
-    
+    order:5; 
     /*border:1px solid blue; /*BORRAR*/
 }
 
-
-#Java{  /*Al ser la habilidad más relevante la coloco primero*/
+/*A las habilidades más relevante les cambio el orden*/
+#Java{  
     order:1;
 }
 
-#CSS{  /*Al ser la habilidad más relevante la coloco primero*/
+#CSS{  
     order:2;
 }
 
-#Photoshop{  /*Al ser una de las habilidades más relevante la coloco primero*/
+#Photoshop{  
     order:3;
 }
 
-
-
+/*barrita de base que representa el 100% de la habilidad*/
 .porcentaje-total{
     position: relative;
     width: 100%;
@@ -396,6 +382,7 @@ a.boton-ini:hover {
     margin-bottom:15px;
 }
 
+/*barrita que representa el % adquirido de la habilidad*/
 .porcentaje{
     position: absolute;
     top: 0;
@@ -410,6 +397,7 @@ span {
 }
 
 /*******************Estilos de Proyectos*******************/
+/*Flex para el contenedor de proyectos*/
 #contenedor-proyectos{
     margin-left: auto;
     display: flex;
@@ -419,7 +407,7 @@ span {
     /*border: 1px solid orange; BORRAR */
 }
 
-
+/*El contenedor de cada proyecto: Flex*/
 .project{
     width: 300px; /*Para que entren 3 proyectos en cada fila*/
     min-width: 100px; /*Cuando se alcance este ancho, tendrá que saltar a otra fila*/
@@ -470,21 +458,18 @@ footer p{
 
 
 
-/*=============v1.1=============/
+/*=============v1.1=============
+COMENTO ESTA PARTE PARA MEJORARLA*/
 
 /*******************Estilos de Contacto*******************/
-/*Sirve para ocultar los iconos de RRSS*/
+/*Sirve para ocultar los iconos de RRSS
 #inferior.bg-marron {
     padding-bottom: 0;
 }
 
-/*Para utilizar z-index necesitamos un contenedor con posicionamiento*/
-#posicion{
-    position:relative;
-}
 
 /*Los iconos tienen que partir de una posición negativa
-para que estén ocultos por el parche inferior*/
+para que estén ocultos por el parche inferior
 #contacto #superior{
     width: 100%;
     display:none;
@@ -494,7 +479,7 @@ para que estén ocultos por el parche inferior*/
     height: 60px;
     z-index: 1; /*Siempre tiene que mantenerse por debajo de los iconos*/
     /*margin-left:20%;
-    margin-right:20%;*/
+    margin-right:20%;
 }
 
 
@@ -506,11 +491,17 @@ para que estén ocultos por el parche inferior*/
     border-top: 4px solid rgba(255, 255, 255, 0.7);
     background: rgba(170, 138, 123 ,0.75);
     /*background-color: #AA8A7B;
-    opacity: 0.75;*/
+    opacity: 0.75;
     filter: blur(0.2rem);
-    backdrop-filter: blur(1px); /*Efecto difuminado*/
+    backdrop-filter: blur(1px); /*Efecto difuminado
     z-index: 3; /*Tiene que ser mayor que los iconos para tapar la mitad inferior */
 }
+
+/*Para utilizar z-index necesitamos un contenedor con posicionamiento
+#posicion{
+    position:relative;
+}
+
 #posicion ul li {
     list-style: none;
     display:inline;
@@ -519,7 +510,7 @@ para que estén ocultos por el parche inferior*/
     margin:auto;
 }
 
-/*Iconos*/
+/*Iconos
 #posicion ul li a{
     position: relative;
     top: 0;
@@ -537,15 +528,14 @@ para que estén ocultos por el parche inferior*/
     background-color: #F2EDEA;
     align-items: center;
     font-size: 3em;
-    z-index: 2; /*Por encima de la capa superior y por debajo de la inferior*/
+    /*z-index: 2; /*Por encima de la capa superior y por debajo de la inferior
 }
-
 
 
 #posicion ul li a:hover{
     position: relative;
-    top:-50px; /*el icono cambia de posicion*/
-    z-index: 30;
+    top:-50px; /*el icono cambia de posicion
+    /*z-index: 30;*/
 }
 
 #contacto.bg-marron{
@@ -554,7 +544,10 @@ para que estén ocultos por el parche inferior*/
     padding-bottom: 12x;
 }
 
+
 /********** FORM CONTACTO ***********/
+
+/*Formato y disposición de los input de nombre e email*/
 input#nombre, input#email{
     font-family: Montserrat;
     color:#595959;
@@ -570,6 +563,7 @@ input#nombre, input#email{
     border: none;
 }
 
+/*El formato y disposición del campo mensaje es diferente*/
 #mensaje {
     font-family: Montserrat;
     color:#595959;
@@ -584,17 +578,15 @@ input#nombre, input#email{
     resize:none;
 }    
 
+/*Flex en el contenedor del formulario*/
 #form-contacto form{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-#cb-privacidad{
-    background-color: rgba(91, 176, 167, 0.4);
-    border: none;
-} 
 
+/*Contenedor de provacidad: Flex*/
 #form-contacto #cont-privacidad{
     width: 48%;
     display: flex;
@@ -606,25 +598,26 @@ input#nombre, input#email{
     box-sizing: border-box;
     
 }
-
-#cb-privacidad {
+/*checkbox de privacidad*/
+#cb-privacidad{
     background-color: rgba(91, 176, 167, 0.4);
     border: none;
+} 
 
-}
-
+/*etiqueta de privacidad*/
 #cont-privacidad label{
     margin-left: 20px;
 }
 
-#flex-centrado{
+/*Quiero que estén alineados en los extremos*/
+#flex-space-bt{
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
 }
     
-
+/*Boton de enviar*/
 input[type=submit] {
     font-family: Montserrat;
     font-weight: bold;
