@@ -29,7 +29,7 @@
                 <li><a href=#formacion>Formación</a></li>
                 <li><a href=#habilidades>Habilidades</a></li>
                 <li><a href=#proyectos>Proyectos</a></li>
-                <li><a href=#proyectos>Referencias</a></li>
+                <li><a href=#referencias>Referencias</a></li>
                 <li><a href=#contacto>Contacto</a></li>
             </ul>
         </nav>
@@ -352,22 +352,6 @@
                             <p class="small">Herramientas: Storyline + JavaScript</p>
                         </div>
                     </div>
-                    <div class="project" id="proy5">
-                        <div class="project-img"><img src="images/proyecto2.png" alt="Proyecto 2"></div>
-                        <div class="project-info">
-                            <p>Navegación desbloqueada por las diapositivas que ya han sido visitadas. </p>
-                            <br>
-                            <p class="small">Herramientas: Storyline + JavaScript</p>
-                        </div>
-                    </div>
-                    <div class="project" id="proy6">
-                        <div class="project-img"><img src="images/proyecto2.png" alt="Proyecto 2"></div>
-                        <div class="project-info">
-                            <p>Navegación desbloqueada por las diapositivas que ya han sido visitadas. </p>
-                            <br>
-                            <p class="small">Herramientas: Storyline + JavaScript</p>
-                        </div>
-                    </div>
                     
                 </div>
 
@@ -376,57 +360,97 @@
                 </div>
             </section>
 
-                <section class="bg-blanco" id="contacto">
-                    <div class="contenedor">
-                        <div class="fila">
-                            <h2>Contacto</h2>
-                        </div>
-                        <hr> <!--línea separadora-->
+            <section class="bg-gris" id="referencias">
+                <div class="contenedor">
+                    <div class="fila">
+                        <h2>Referencias</h2>
+                        <p class="cursiva">Lo que se dice por ahí...</p>
                     </div>
-                    <section>
-                        <div class="contenedor" id="form-contacto">
-                            <h3>¿Hablamos?</h3>
-                            <form>
-                                <input type="text" id="nombre" name="nombre" placeholder="Nombre"></input>
-                                <input type="email" id="email" name="email" placeholder="Email"></input>
-                                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" cols="50"></textarea>
-                                <div id="flex-space-bt">
-                                    <div id="cont-privacidad">
-                                        <input type="checkbox" id="cb-privacidad" name="cb-privacidad" value="Si"></input>
-                                        <label class="small" for="pprivacidad">Acepto la política de privacidad</label><br>
-                                    </div>
-
-                                    <input type="submit" value="Enviar">
+                    <hr> <!--línea separadora-->
+                </div>
+                <section>
+                    <div class="contenedor">
+                        <div id="tarjetas">
+                            
+                            <div class="tarjeta-ref"  id="ref1">
+                                <img src="images/ref2.png">
+                                <div class="txt-ref">
+                                    <h4>Pepita</h4>
+                                    <p class="cursiva">"La compañera que todo el mundo le gustaría tener"</p>
                                 </div>
-                            </form>
-
-                        </div>
-
-
-
-
-
-
-                        <!-- 
-                        <div class="contenedor" id="posicion">
-                            <div class="fila" id="superior">
-                                <ul>
-                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-github"></i></a></li>
-                                </ul>
+                            </div>
+                            <div class="tarjeta-ref"  id="ref2">
+                                <img src="images/ref1.png">
+                                <div class="txt-ref">
+                                    <h4>Juana</h4>
+                                    <p class="cursiva">"Su implicación en los proyectos era del 100%"</p>
+                                </div>
+                            </div>
+                            <div class="tarjeta-ref"  id="ref3">
+                                <img src="images/ref3.png">
+                                <div class="txt-ref">
+                                    <h4>Estefanía</h4>
+                                    <p class="cursiva">"Formábamos un gran equipo"</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="fila" id="inferior"> 
-                            -->  
-                    </section>
-                </section>
+                        
 
-                <footer>
-                    <p>Pilar Navío Colón</p>
-                    <p>v1.2.2</p>
-                    <p>09/11/21</p>
-                  </footer>
+                    </div>
+ 
+                </section>
+            </section>
+
+            <section class="bg-blanco" id="contacto">
+                <div class="contenedor">
+                    <div class="fila">
+                        <h2>Contacto</h2>
+                        <p class="cursiva">¿Hablamos?</p>
+
+                    </div>
+                    <hr> <!--línea separadora-->
+                </div>
+                <section>
+                    <div class="contenedor" id="form-contacto">
+                        
+                        <form>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre"></input>
+                            <input type="email" id="email" name="email" placeholder="Email"></input>
+                            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" cols="50"></textarea>
+                            <div id="flex-space-bt">
+                                <div id="cont-privacidad">
+                                    <input type="checkbox" id="cb-privacidad" name="cb-privacidad" value="Si"></input>
+                                    <label class="small" for="pprivacidad">Acepto la política de privacidad</label><br>
+                                </div>
+
+                                <input type="submit" value="Enviar">
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <!-- LO COMENTO PARA MEJORARLO
+                    <div class="contenedor" id="posicion">
+                        <div class="fila" id="superior">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="fila" id="inferior"> 
+                        -->  
+                </section>
+            </section>
+
+            
+
+            <footer>
+                <p>Pilar Navío Colón</p>
+                <p>v1.2.2</p>
+                <p>09/11/21</p>
+            </footer>
         </main>
 
         
